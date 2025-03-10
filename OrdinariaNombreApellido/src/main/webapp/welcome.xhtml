@@ -40,16 +40,17 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
                     <h2 class="mb-3">Funcionalidades</h2>
-                    <form action="${request.contextPath}/biblio-servlet" method="post" class="p-4 border rounded shadow bg-light">
+                    <h:form class="p-4 border rounded shadow bg-light">
                         <div class="mb-3">
-                            <label for="opcion" class="form-label">Seleccione una opción:</label>
-                            <select name="opcion" id="opcion" class="form-select">
-                                <option value="ver-libros">Ver libros disponibles</option>
-                                <option value="consultar-prestamos">Consultar préstamos</option>
-                            </select>
+                            <h:outputLabel for="opcion" styleClass="form-label" value="Seleccione una opción"></h:outputLabel>
+                            <h:selectOneMenu value="????????" styleClass="form-select">
+                                <f:selectItem itemValue="ver-libros" itemLabel="ver libros disponibles"/>
+                                <f:selectItem itemValue="consultar-prestamos" itemLabel="consultar-prestamos"/>
+                                
+                            </h:selectOneMenu>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
-                    </form>
+                        <h:commandButton value="Enviar" action="????" styleClass="btn btn-primary w-100"/>
+                    </h:form>
                 </div>
             </div>
         </div>
